@@ -304,9 +304,9 @@ class Network(object):
             #########################
             tf.summary.histogram('state_means', self.state_means)
             tf.summary.histogram('state_log_sigma', self.state_log_sigma)
-            for i, (w, b) in enumerate(zip(self.euler_weights, self.euler_biases)):
-                tf.summary.histogram('euler_weight_{}'.format(i), w)
-                tf.summary.histogram('euler_bias_{}'.format(i), b)
+            # for i, (w, b) in enumerate(zip(self.euler_weights, self.euler_biases)):
+            #     tf.summary.histogram('euler_weight_{}'.format(i), w)
+            #     tf.summary.histogram('euler_bias_{}'.format(i), b)
             tf.summary.scalar('cost', self.cost)
             tf.summary.scalar('reconstruction_cost', self.recon_loss)
             tf.summary.scalar('kl_cost', self.kl_loss)
